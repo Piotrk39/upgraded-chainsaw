@@ -1,0 +1,51 @@
+{
+	"info": {
+		"_postman_id": "0f564f2a-69c7-42ae-89ee-a2218cfcaebd",
+		"name": "Tzoker",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Active Draw",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"res = JSON.parse(responseBody);",
+							"",
+							"drawId = res.drawId;",
+							"",
+							"console.log(\"drawId: \"+drawId);",
+							"",
+							"pm.test(\"Draw is Active\", function () {",
+							"    pm.expect(res.status).to.eql(\"active\");",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.opap.gr/draws/v3.0/1100/active",
+					"protocol": "https",
+					"host": [
+						"api",
+						"opap",
+						"gr"
+					],
+					"path": [
+						"draws",
+						"v3.0",
+						"1100",
+						"active"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
