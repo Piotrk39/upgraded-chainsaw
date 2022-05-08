@@ -6,10 +6,10 @@ Attached folders consist of both Selenium Test Suite that was created using Java
 
 STEPS for Selenium Suite:
 
-- Make sure that the correct driver is already installed on the machine
-- Open terminal at “seleniumTestExample” folder
+- Open terminal at “seleniumTestExample copy” folder
+- Run the command 'npm install selenium-webdriver'
 - Run the command ‘node index.js’
-- Test should run after that
+- After that test should be executed
 
 STEPS for Postman Collection:
 
